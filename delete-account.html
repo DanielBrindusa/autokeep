@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoKeep Account Deletion</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            --bg: #f4f1eb;
+            --surface: rgba(255, 255, 255, 0.84);
+            --surface-dark: rgba(24, 28, 31, 0.88);
+            --text: #1f2529;
+            --text-muted: #56636d;
+            --accent: #1f7a78;
+            --danger: #b24033;
+            --border: rgba(31, 37, 41, 0.12);
+            --shadow: 0 22px 44px rgba(19, 25, 30, 0.08);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #101517;
+                --surface: var(--surface-dark);
+                --text: #edf3f5;
+                --text-muted: #b5c1c8;
+                --accent: #6fd0c7;
+                --danger: #ff9f91;
+                --border: rgba(237, 243, 245, 0.12);
+                --shadow: 0 22px 44px rgba(0, 0, 0, 0.28);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background:
+                radial-gradient(circle at top right, rgba(178, 64, 51, 0.08), transparent 30%),
+                radial-gradient(circle at top left, rgba(31, 122, 120, 0.10), transparent 34%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+
+        .page {
+            width: min(920px, calc(100% - 32px));
+            margin: 40px auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            backdrop-filter: blur(14px);
+        }
+
+        .hero {
+            padding: 40px 28px 24px;
+            background: linear-gradient(135deg, rgba(178, 64, 51, 0.12), rgba(31, 122, 120, 0.06));
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            line-height: 1.12;
+        }
+
+        .hero p {
+            margin: 0;
+            max-width: 760px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .content {
+            padding: 10px 28px 34px;
+        }
+
+        .section {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        ul, ol {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        li + li {
+            margin-top: 6px;
+        }
+
+        .meta {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(178, 64, 51, 0.12);
+            color: var(--danger);
+            font-weight: 600;
+            font-size: 0.92rem;
+        }
+
+        .callout {
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: rgba(178, 64, 51, 0.08);
+            border: 1px solid rgba(178, 64, 51, 0.18);
+            margin-top: 12px;
+        }
+
+        a {
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <section class="hero">
+            <h1>AutoKeep Account Deletion</h1>
+            <p>
+                This page explains how AutoKeep users can permanently delete their online account and related online
+                data.
+            </p>
+            <div class="meta">Last updated: April 13, 2026</div>
+        </section>
+
+        <section class="content">
+            <div class="section">
+                <h2>1. What this page is for</h2>
+                <p>
+                    AutoKeep users who created an online account can request permanent deletion of that online account
+                    and related online data.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>2. How to delete your account inside the app</h2>
+                <p>Use the in-app deletion flow:</p>
+                <ol>
+                    <li>Open AutoKeep.</li>
+                    <li>Open <strong>Settings</strong>.</li>
+                    <li>Open <strong>Delete account and all data permanently</strong>.</li>
+                    <li>Enter your account email and password.</li>
+                    <li>Type <strong>DELETE</strong> to confirm.</li>
+                    <li>Confirm the warning checkbox.</li>
+                    <li>Tap <strong>Delete account and all data permanently</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>3. What is deleted</h2>
+                <p>When permanent deletion completes, AutoKeep is intended to delete the following for that user:</p>
+                <ul>
+                    <li>online account access</li>
+                    <li>private synced records linked to that account</li>
+                    <li>uploaded online files linked to that account</li>
+                    <li>sync metadata and app-owned online records linked to that account</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>4. What is not part of account deletion</h2>
+                <p>The following are not part of personal account deletion:</p>
+                <ul>
+                    <li>shared public official links</li>
+                    <li>shared provider references</li>
+                    <li>shared country references</li>
+                    <li>other users and their data</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>5. Local device data</h2>
+                <p>
+                    Depending on the in-app flow, local app data on the device may also be wiped as part of permanent
+                    deletion after the online deletion completes successfully.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>6. Important warning</h2>
+                <div class="callout">
+                    <p>
+                        Permanent deletion cannot be undone. After the online account and related online data are
+                        deleted, they cannot be restored.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>7. If you cannot access the app</h2>
+                <p>
+                    If you cannot access the app and need help with account deletion, contact support from the email
+                    address associated with your AutoKeep account.
+                </p>
+                <p>
+                    Support email:
+                    <a href="mailto:brindusa.daniel@gmail.com">brindusa.daniel@gmail.com</a>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>8. Contact</h2>
+                <p>
+                    If you have questions about account deletion or data handling in AutoKeep, contact:
+                </p>
+                <ul>
+                    <li>Email: <a href="mailto:brindusa.daniel@gmail.com">brindusa.daniel@gmail.com</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
