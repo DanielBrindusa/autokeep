@@ -126,8 +126,9 @@
         <div class="eyebrow">AutoKeep</div>
         <h1>Privacy Policy</h1>
         <p>
-            This Privacy Policy explains how AutoKeep handles private records, optional online sync,
-            and account deletion choices.
+            This Privacy Policy explains how AutoKeep handles local records, optional cloud use,
+            manual Push to cloud and Pull from cloud actions, automatic online cleanup rules,
+            notifications, and permanent deletion choices.
         </p>
         <div class="meta">
             <p><strong>App:</strong> AutoKeep</p>
@@ -140,56 +141,97 @@
         <h2>1. Local-only use is available</h2>
         <p>
             You can use AutoKeep locally on your device without creating an online account.
-            If you stay in local-only mode, your private records remain saved on this device unless you later choose to enable Cloud Sync.
+            If you stay in local-only mode, your private records remain saved on this device.
         </p>
     </section>
 
     <section>
-        <h2>2. Optional online account and Cloud Sync</h2>
+        <h2>2. Notifications are required</h2>
         <p>
-            AutoKeep offers an optional online account and optional Cloud Sync. If you choose to enable it,
-            you will go through the Cloud Sync setup flow, choose what should sync, review the required notice,
-            create an online account, and verify your email if required.
-        </p>
-        <p>
-            AutoKeep does not require payment to enable Cloud Sync.
+            AutoKeep requires notifications to be enabled before the app can be used.
+            Notifications are used for important reminders, including the weekly Push to cloud reminder
+            and warning messages before automatic online cleanup actions.
         </p>
     </section>
 
     <section>
-        <h2>3. What private data may be stored online</h2>
+        <h2>3. Optional online account and cloud setup</h2>
         <p>
-            If you enable Cloud Sync, only the private data you choose in your sync scope is intended to be stored in your online account.
+            AutoKeep offers an optional online account and optional cloud use.
+            If you choose it, you will review the cloud setup flow, choose what is allowed to sync,
+            review and accept the required notice, create an online account, and verify your email if required.
+        </p>
+        <p>
+            Cloud use is optional. You can continue using the app locally if that is your preference.
+        </p>
+    </section>
+
+    <section>
+        <h2>4. Manual Push to cloud and Pull from cloud</h2>
+        <p>
+            AutoKeep does not automatically send your private data to the database and does not automatically pull it back.
+            Private data moves only when you are signed in, cloud is enabled for your account, and you explicitly press:
+        </p>
+        <ul>
+            <li><strong>Push to cloud</strong> to send selected eligible data from this device to your online account</li>
+            <li><strong>Pull from cloud</strong> to bring your selected online data back to this device</li>
+        </ul>
+        <p>
+            No automatic private-data sync runs on app launch, sign-in, or in the background.
+        </p>
+    </section>
+
+    <section>
+        <h2>5. What private data may be stored online</h2>
+        <p>
+            If you enable cloud use, only the private data you selected in your sync scope is intended to be stored in your online account.
         </p>
         <ul>
             <li>Vehicle profiles</li>
             <li>Documents</li>
-            <li>Uploaded files linked to synced documents</li>
+            <li>Uploaded files linked to synced documents, if included in the selected sync scope</li>
             <li>Reminders</li>
-            <li>Cloud Sync metadata needed to keep your selected sync scope and sync status consistent</li>
+            <li>Cloud metadata needed to keep your selected sync scope, account state, and manual sync status consistent</li>
         </ul>
         <p>
-            If a category is not selected for Cloud Sync, it should remain excluded from online storage.
+            If a category or vehicle is not selected for cloud use, it should remain excluded from online storage.
         </p>
     </section>
 
     <section>
-        <h2>4. Public shared resources</h2>
+        <h2>6. Public shared resources</h2>
         <p>
-            AutoKeep also shows shared public resources such as official links. These shared resources are separate from your private records and are not tied to your online account.
+            AutoKeep also shows shared public resources such as official links.
+            These shared resources are separate from your private records and are not tied to your online account.
         </p>
     </section>
 
     <section>
-        <h2>5. Sign in, sign out, and return to local-only mode</h2>
+        <h2>7. Sign in, sign out, and manual cloud use</h2>
         <p>
-            If you create an online account, you can sign in again later and reconnect your Cloud Sync.
-            You can also log out. Logging out is not deletion. Logging out keeps your online data intact and keeps your local data on the phone.
+            If you create an online account, you can sign in again later and use manual Push to cloud or Pull from cloud.
+            Logging out is not deletion. Logging out keeps your online data intact and keeps your local data on the device.
         </p>
     </section>
 
     <section>
-        <h2>6. Permanent deletion choices</h2>
+        <h2>8. Automatic online cleanup rules</h2>
+        <p>
+            AutoKeep applies automatic online cleanup rules to online account data.
+        </p>
+        <ul>
+            <li><strong>Inactive online account removal:</strong> if an online account stays inactive for longer than 14 months, the online account and all related online data are permanently removed automatically.</li>
+            <li><strong>Expired online data removal:</strong> if online records stay expired for longer than 12 months past their expiry date, those expired online records are permanently removed automatically from the online database and cloud storage.</li>
+            <li><strong>Advance warning:</strong> a notification is sent 1 week before either automatic cleanup happens.</li>
+        </ul>
+        <p>
+            These automatic cleanup actions cannot be stopped from inside the app.
+            Manual Push to cloud will not upload records that are already too old for online retention.
+        </p>
+    </section>
+
+    <section>
+        <h2>9. Permanent deletion choices</h2>
         <p>
             AutoKeep offers two permanent deletion choices for signed-in users:
         </p>
@@ -198,27 +240,29 @@
             <li><strong>Delete online account, online data, and local device data permanently:</strong> removes the online account and related online data, and also deletes the private AutoKeep data saved on the device.</li>
         </ul>
         <p>
-            In both cases, only the requesting user’s data is affected. Shared public resources are not deleted.
+            In both cases, only the requesting user's data is affected. Shared public resources are not deleted.
         </p>
     </section>
 
     <section>
-        <h2>7. What is deleted from the online account</h2>
+        <h2>10. What is deleted from the online account</h2>
         <p>
-            When permanent online deletion is requested, AutoKeep is intended to permanently delete the requesting user’s online account and user-owned online records, including online metadata and uploaded files tied to that user.
+            When permanent online deletion is requested or when automatic online account removal applies,
+            AutoKeep is intended to permanently delete the affected user's online account and user-owned online records,
+            including uploaded files and online metadata tied to that user.
         </p>
     </section>
 
     <section>
-        <h2>8. Data handling on this device</h2>
+        <h2>11. Post-delete message inside the app</h2>
         <p>
-            Depending on the deletion option chosen, local app data may either stay on the device or be deleted from the device.
-            The app explains the difference before the deletion is confirmed.
+            After a cloud deletion completes successfully, AutoKeep shows a message on the main screen explaining what was deleted.
+            This message remains visible until the user explicitly acknowledges it.
         </p>
     </section>
 
     <section>
-        <h2>9. Security and access control</h2>
+        <h2>12. Security and access control</h2>
         <p>
             AutoKeep is intended to allow users to access only their own private online records.
             Shared public resources are handled separately from user-owned private data.
@@ -226,7 +270,7 @@
     </section>
 
     <section>
-        <h2>10. Contact</h2>
+        <h2>13. Contact</h2>
         <p>
             If you have privacy or account questions about AutoKeep, contact:
             <a href="mailto:brindusa.daniel@gmail.com">brindusa.daniel@gmail.com</a>
