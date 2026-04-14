@@ -8,8 +8,8 @@
         :root {
             color-scheme: light dark;
             --bg: #f4f1eb;
-            --surface: rgba(255, 255, 255, 0.84);
-            --surface-dark: rgba(24, 28, 31, 0.88);
+            --surface: rgba(255, 255, 255, 0.9);
+            --surface-dark: rgba(24, 28, 31, 0.9);
             --text: #1f2529;
             --text-muted: #56636d;
             --accent: #1f7a78;
@@ -37,83 +37,82 @@
             margin: 0;
             font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background:
-                radial-gradient(circle at top left, rgba(31, 122, 120, 0.10), transparent 34%),
-                linear-gradient(180deg, rgba(255, 255, 255, 0.22), transparent 18%),
+                radial-gradient(circle at top left, rgba(31, 122, 120, 0.16), transparent 34%),
+                linear-gradient(180deg, rgba(255, 255, 255, 0.35), transparent 32%),
                 var(--bg);
             color: var(--text);
             line-height: 1.65;
         }
 
-        .page {
-            width: min(920px, calc(100% - 32px));
-            margin: 40px auto;
+        main {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 32px 18px 48px;
+        }
+
+        .hero,
+        section {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 24px;
             box-shadow: var(--shadow);
-            overflow: hidden;
-            backdrop-filter: blur(14px);
+            backdrop-filter: blur(12px);
         }
 
         .hero {
-            padding: 40px 28px 24px;
-            background: linear-gradient(135deg, rgba(31, 122, 120, 0.14), rgba(31, 122, 120, 0.04));
-            border-bottom: 1px solid var(--border);
+            padding: 28px 24px;
+            margin-bottom: 18px;
         }
 
-        .hero h1 {
-            margin: 0 0 10px;
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            line-height: 1.12;
+        section {
+            padding: 24px;
+            margin-bottom: 16px;
         }
 
-        .hero p {
-            margin: 0;
-            max-width: 760px;
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        .content {
-            padding: 10px 28px 34px;
-        }
-
-        .section {
-            padding: 18px 0;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .section:last-child {
-            border-bottom: none;
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.1;
         }
 
         h2 {
-            margin: 0 0 10px;
-            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
         }
 
-        p {
-            margin: 0 0 12px;
+        p,
+        li {
+            color: var(--text-muted);
+            margin-top: 0;
         }
 
         ul {
-            margin: 0;
             padding-left: 20px;
+            margin: 0;
         }
 
-        li + li {
-            margin-top: 6px;
-        }
-
-        .meta {
+        .eyebrow {
             display: inline-block;
-            margin-top: 12px;
-            padding: 8px 12px;
+            margin-bottom: 12px;
+            padding: 6px 12px;
             border-radius: 999px;
             background: rgba(31, 122, 120, 0.12);
             color: var(--accent);
-            font-weight: 600;
-            font-size: 0.92rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .meta {
+            display: grid;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .meta strong {
+            color: var(--text);
         }
 
         a {
@@ -122,184 +121,117 @@
     </style>
 </head>
 <body>
-    <main class="page">
-        <section class="hero">
-            <h1>AutoKeep Privacy Policy</h1>
-            <p>
-                This Privacy Policy explains how AutoKeep handles local records, optional online account features,
-                imported files, and permanent account deletion.
-            </p>
-            <div class="meta">Last updated: April 13, 2026</div>
-        </section>
+<main>
+    <div class="hero">
+        <div class="eyebrow">AutoKeep</div>
+        <h1>Privacy Policy</h1>
+        <p>
+            This Privacy Policy explains how AutoKeep handles private records, optional online sync,
+            and account deletion choices.
+        </p>
+        <div class="meta">
+            <p><strong>App:</strong> AutoKeep</p>
+            <p><strong>Last updated:</strong> April 14, 2026</p>
+            <p><strong>Support contact:</strong> <a href="mailto:brindusa.daniel@gmail.com">brindusa.daniel@gmail.com</a></p>
+        </div>
+    </div>
 
-        <section class="content">
-            <div class="section">
-                <h2>1. Who this policy applies to</h2>
-                <p>
-                    This Privacy Policy applies to users of the AutoKeep Android application with package name
-                    <strong>com.autokeep.app</strong>.
-                </p>
-            </div>
+    <section>
+        <h2>1. Local-only use is available</h2>
+        <p>
+            You can use AutoKeep locally on your device without creating an online account.
+            If you stay in local-only mode, your private records remain saved on this device unless you later choose to enable Cloud Sync.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>2. What AutoKeep does</h2>
-                <p>AutoKeep helps users manage vehicle-related information in one organized place.</p>
-                <ul>
-                    <li>vehicle profiles</li>
-                    <li>vehicle documents</li>
-                    <li>reminders and due dates</li>
-                    <li>proof files and notes</li>
-                    <li>official links and public resources</li>
-                    <li>optional online sync for selected private records</li>
-                    <li>permanent online account and data deletion</li>
-                </ul>
-            </div>
+    <section>
+        <h2>2. Optional online account and Cloud Sync</h2>
+        <p>
+            AutoKeep offers an optional online account and optional Cloud Sync. If you choose to enable it,
+            you will go through the Cloud Sync setup flow, choose what should sync, review the required notice,
+            create an online account, and verify your email if required.
+        </p>
+        <p>
+            AutoKeep does not require payment to enable Cloud Sync.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>3. Local-only use</h2>
-                <p>You can use AutoKeep locally on your device without creating an online account.</p>
-                <ul>
-                    <li>private records can stay only on your device</li>
-                    <li>shared official links may still be loaded online</li>
-                    <li>private sync does not happen unless you choose to enable it</li>
-                </ul>
-            </div>
+    <section>
+        <h2>3. What private data may be stored online</h2>
+        <p>
+            If you enable Cloud Sync, only the private data you choose in your sync scope is intended to be stored in your online account.
+        </p>
+        <ul>
+            <li>Vehicle profiles</li>
+            <li>Documents</li>
+            <li>Uploaded files linked to synced documents</li>
+            <li>Reminders</li>
+            <li>Cloud Sync metadata needed to keep your selected sync scope and sync status consistent</li>
+        </ul>
+        <p>
+            If a category is not selected for Cloud Sync, it should remain excluded from online storage.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>4. Information you may enter into the app</h2>
-                <p>Depending on how you use AutoKeep, the app may process information such as:</p>
-                <ul>
-                    <li>vehicle profile details</li>
-                    <li>document details</li>
-                    <li>reminders and dates</li>
-                    <li>notes and reference details</li>
-                    <li>imported files, PDFs, images, and scans</li>
-                    <li>email address for optional online account access</li>
-                    <li>selected sync preferences</li>
-                </ul>
-            </div>
+    <section>
+        <h2>4. Public shared resources</h2>
+        <p>
+            AutoKeep also shows shared public resources such as official links. These shared resources are separate from your private records and are not tied to your online account.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>5. Optional online account and sync</h2>
-                <p>AutoKeep offers an optional online account and optional online sync.</p>
-                <ul>
-                    <li>selected private data may be stored in the cloud database if you enable sync</li>
-                    <li>selected uploaded files may be stored in online storage if sync requires them</li>
-                    <li>only the categories you choose in the sync scope are intended to be uploaded</li>
-                    <li>shared public official resources are separate from your private account data</li>
-                </ul>
-            </div>
+    <section>
+        <h2>5. Sign in, sign out, and return to local-only mode</h2>
+        <p>
+            If you create an online account, you can sign in again later and reconnect your Cloud Sync.
+            You can also log out. Logging out is not deletion. Logging out keeps your online data intact and keeps your local data on the phone.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>6. Shared public resources</h2>
-                <p>
-                    AutoKeep may show public official resources such as provider pages, approved public links, and
-                    country references. These public resources are not part of your private account data.
-                </p>
-            </div>
+    <section>
+        <h2>6. Permanent deletion choices</h2>
+        <p>
+            AutoKeep offers two permanent deletion choices for signed-in users:
+        </p>
+        <ul>
+            <li><strong>Delete online account and online data permanently:</strong> removes the online account and related online data, while keeping local device data on the phone.</li>
+            <li><strong>Delete online account, online data, and local device data permanently:</strong> removes the online account and related online data, and also deletes the private AutoKeep data saved on the device.</li>
+        </ul>
+        <p>
+            In both cases, only the requesting user’s data is affected. Shared public resources are not deleted.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>7. File imports and document handling</h2>
-                <p>
-                    If you import files into AutoKeep, the app may copy selected files into app-managed private storage
-                    on your device so they can be attached to your records.
-                </p>
-                <ul>
-                    <li>PDF documents</li>
-                    <li>images</li>
-                    <li>scanned files</li>
-                </ul>
-            </div>
+    <section>
+        <h2>7. What is deleted from the online account</h2>
+        <p>
+            When permanent online deletion is requested, AutoKeep is intended to permanently delete the requesting user’s online account and user-owned online records, including online metadata and uploaded files tied to that user.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>8. Sign-in and account verification</h2>
-                <p>If you create an online account, AutoKeep may process:</p>
-                <ul>
-                    <li>your email address</li>
-                    <li>your password</li>
-                    <li>email verification state</li>
-                </ul>
-                <p>
-                    This is used to create your online account, sign you in, verify your email address, and protect
-                    access to synced private records.
-                </p>
-            </div>
+    <section>
+        <h2>8. Data handling on this device</h2>
+        <p>
+            Depending on the deletion option chosen, local app data may either stay on the device or be deleted from the device.
+            The app explains the difference before the deletion is confirmed.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>9. How your information is used</h2>
-                <ul>
-                    <li>display and organize your records</li>
-                    <li>save private records on your device</li>
-                    <li>sync selected records with your online account if you enable sync</li>
-                    <li>show reminders and due-date information</li>
-                    <li>provide access to public official resources</li>
-                    <li>process sign-in, verification, and deletion requests</li>
-                    <li>support backup, restore, export, and internal app functionality</li>
-                </ul>
-            </div>
+    <section>
+        <h2>9. Security and access control</h2>
+        <p>
+            AutoKeep is intended to allow users to access only their own private online records.
+            Shared public resources are handled separately from user-owned private data.
+        </p>
+    </section>
 
-            <div class="section">
-                <h2>10. Data deletion and account deletion</h2>
-                <p>
-                    If you use an online account, AutoKeep provides a flow to permanently delete your online account
-                    and related online data.
-                </p>
-                <ul>
-                    <li>only your own online account and related online data are targeted</li>
-                    <li>your online account is permanently deleted</li>
-                    <li>your synced records linked to that account are permanently deleted</li>
-                    <li>your uploaded online files linked to that account are permanently deleted</li>
-                    <li>app-owned sync metadata and related online records linked to that account are intended to be permanently deleted</li>
-                </ul>
-                <p>
-                    Shared public resources are not part of your personal account deletion. After permanent deletion
-                    completes, the online account and synced data cannot be restored.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2>11. Your choices</h2>
-                <ul>
-                    <li>use AutoKeep locally without an online account</li>
-                    <li>decide which private categories are synced</li>
-                    <li>stop using online sync</li>
-                    <li>permanently delete your online account and related online data</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>12. Data security</h2>
-                <p>
-                    AutoKeep is designed to handle private records carefully and to use secure account and deletion
-                    flows for optional online features.
-                </p>
-                <p>
-                    No method of storage or transmission is guaranteed to be perfectly secure, but AutoKeep is intended
-                    to use reasonable technical measures appropriate to the app’s purpose.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2>13. Children</h2>
-                <p>AutoKeep is not designed specifically for children.</p>
-            </div>
-
-            <div class="section">
-                <h2>14. Changes to this Privacy Policy</h2>
-                <p>
-                    This Privacy Policy may be updated from time to time. If it changes, the updated version should be
-                    published with a new “Last updated” date.
-                </p>
-            </div>
-
-            <div class="section">
-                <h2>15. Contact</h2>
-                <p>If you have questions about this Privacy Policy or AutoKeep, you can contact:</p>
-                <ul>
-                    <li>Email: <a href="mailto:brindusa.daniel@gmail.com">brindusa.daniel@gmail.com</a></li>
-                </ul>
-            </div>
-        </section>
-    </main>
+    <section>
+        <h2>10. Contact</h2>
+        <p>
+            If you have privacy or account questions about AutoKeep, contact:
+            <a href="mailto:brindusa.daniel@gmail.com">brindusa.daniel@gmail.com</a>
+        </p>
+    </section>
+</main>
 </body>
 </html>
